@@ -6,7 +6,6 @@ using std::endl;
 
 class Point
 {
-	//string m_length;
 	int m_x;
 	int m_y;
 
@@ -29,11 +28,17 @@ public:
 		m_x = b.m_x;
 		m_y = b.m_y;
 	}
+
+	/*Point(const Point& c)
+	{
+		this->m_x = c.m_x;
+		this->m_y = c.m_y;
+	}*/
 };
 
 void mars()
 {
-	cout << "Я на марсе" << endl;
+	cout << "Я на Марсе" << endl;
 	Point km;
 	km.distance(10, 15);
 	km.print();
@@ -50,7 +55,5 @@ void main()
 	copy.copyFrom(km); //copyFrom() имеет спецификатор доступа public.
 	copy.print();
 
-	//Point m;
-	//m.mars();
 	mars();
 }
