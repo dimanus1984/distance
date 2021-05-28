@@ -1,4 +1,4 @@
-#include<iostream>
+п»ї#include<iostream>
 using namespace std;
 using std::cout;
 using std::cin;
@@ -11,7 +11,7 @@ class Point
 	int m_y;
 
 public:
-	//Метод вывода, который возвращает расстояние до указанной точки
+	//РњРµС‚РѕРґ РІС‹РІРѕРґР°, РєРѕС‚РѕСЂС‹Р№ РІРѕР·РІСЂР°С‰Р°РµС‚ СЂР°СЃСЃС‚РѕСЏРЅРёРµ РґРѕ СѓРєР°Р·Р°РЅРЅРѕР№ С‚РѕС‡РєРё
 	void distance(int first, int second)
 	{
 		m_x = first;
@@ -20,14 +20,22 @@ public:
 
 	void print()
 	{
-		cout << "До Академии остальсь пройти: " << m_y - m_x << " км." << endl;
+		cout << "Р”Рѕ РђРєР°РґРµРјРёРё РѕСЃС‚Р°Р»РѕСЃСЊ РїСЂРѕР№С‚Рё: " << m_y - m_x << " РєРј." << endl;
 	}
 
-	//Скопировал элементы из одного объекта класса в другой объект того же класса.
+	//РЎРєРѕРїРёСЂРѕРІР°Р» СЌР»РµРјРµРЅС‚С‹ РёР· РѕРґРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° РєР»Р°СЃСЃР° РІ РґСЂСѓРіРѕР№ РѕР±СЉРµРєС‚ С‚РѕРіРѕ Р¶Рµ РєР»Р°СЃСЃР°.
 	void copyFrom(const Point& b)
 	{
 		m_x = b.m_x;
 		m_y = b.m_y;
+	}
+
+	void mars()
+	{
+		cout << "РЇ РЅР° РјР°СЂСЃРµ" << endl;
+		Point km;
+		km.distance(10, 15);
+		km.print();
 	}
 };
 
@@ -35,10 +43,13 @@ void main()
 {
 	setlocale(LC_ALL, "");
 	Point km;
-	km.distance(2, 5); //distance() имеет спецификатор доступа public.
+	km.distance(2, 5); //distance() РёРјРµРµС‚ СЃРїРµС†РёС„РёРєР°С‚РѕСЂ РґРѕСЃС‚СѓРїР° public.
 	km.print();
 
 	Point copy;
-	copy.copyFrom(km); //copyFrom() имеет спецификатор доступа public.
+	copy.copyFrom(km); //copyFrom() РёРјРµРµС‚ СЃРїРµС†РёС„РёРєР°С‚РѕСЂ РґРѕСЃС‚СѓРїР° public.
 	copy.print();
+
+	Point m;
+	m.mars();
 }
