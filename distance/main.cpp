@@ -29,15 +29,15 @@ public:
 		m_x = b.m_x;
 		m_y = b.m_y;
 	}
-
-	void mars()
-	{
-		cout << "Я на марсе" << endl;
-		Point km;
-		km.distance(10, 15);
-		km.print();
-	}
 };
+
+void mars()
+{
+	cout << "Я на марсе" << endl;
+	Point km;
+	km.distance(10, 15);
+	km.print();
+}
 
 void main()
 {
@@ -50,6 +50,7 @@ void main()
 	copy.copyFrom(km); //copyFrom() имеет спецификатор доступа public.
 	copy.print();
 
-	Point m;
-	m.mars();
+	//Point m;
+	//m.mars();
+	mars();
 }
